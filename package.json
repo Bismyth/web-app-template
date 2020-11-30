@@ -1,0 +1,21 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "main": "server/server.ts",
+  "repository": "",
+  "author": "DrDestroydo <woodsy867@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server": "yarn workspace server start",
+    "dev": "concurrently --kill-others-on-fail \"yarn client\" \"yarn server\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
